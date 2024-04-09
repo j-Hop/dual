@@ -11,52 +11,27 @@ import './firebase';
 import { store, persistor } from "./redux/store";
 
 
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//     <Provider store={store}>
-//         <PersistGate loading={null} persistor={persistor}>
-//             <ThemeProvider theme={theme}>
-//                 <BrowserRouter basename="/dual">
-//                 <App/>
-//                 <Toaster
-//                 toastOptions={{
-//                     success : {
-//                         iconTheme: { primary: 'green', secondary: 'white' },
-//                         style: { color: 'white', background: 'green' },
-//                     },
-//                     error :{
-//                         iconTheme: { primary: 'red', secondary: 'white' },
-//                         style: { color: 'white', background: 'red' },
-//                     },
-//                 }}
-//                 />
-//                 <GlobalStyle/>
-//                 </BrowserRouter>
-//             </ThemeProvider>
-//         </PersistGate>
-//     </Provider>
-// );
-
 ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <ThemeProvider theme={theme}>
-          <BrowserRouter basename="/dual">
-            <App />
-            <Toaster
-              toastOptions={{
-                success: {
-                  iconTheme: { primary: 'green', secondary: 'white' },
-                  style: { color: 'white', background: '#38CD3E' },
-                },
-                error: {
-                  iconTheme: { primary: 'red', secondary: 'white' },
-                  style: { color: 'white', background: 'red' },
-                },
-              }}
-            />
-            <GlobalStyle />
-          </BrowserRouter>
-        </ThemeProvider>
-      </PersistGate>
+        <PersistGate loading={null} persistor={persistor}>
+            <ThemeProvider theme={theme}>
+                <BrowserRouter basename="/Nannies-service">
+                <App/>
+                <Toaster
+                toastOptions={{
+                    success : {
+                        iconTheme: { primary: 'green', secondary: 'white' },
+                        style: { color: 'white', background: 'green' },
+                    },
+                    error :{
+                        iconTheme: { primary: 'red', secondary: 'white' },
+                        style: { color: 'white', background: 'red' },
+                    },
+                }}
+                />
+                <GlobalStyle/>
+                </BrowserRouter>
+            </ThemeProvider>
+        </PersistGate>
     </Provider>
-  );
+);
