@@ -83,7 +83,7 @@ validationSchema={Order}
 <WrapperModal>
     <ModalAvatar src={card.avatar_url}  alt='avatar' width='44' height='44'/>
     <p>Your nanny</p>
-    <h3>{card.name} {card.surname}</h3>
+    <h3>{card.name}</h3>
 </WrapperModal>
 
 <CardGroup>

@@ -115,7 +115,7 @@ return(
             <IconStar width='16' height='16'>
             </IconStar>
             <p>Rating:{rating}</p><VerticalLine>|</VerticalLine>{''}
-            <p>Price / 1 hour:</p><GreenPrice>{price_per_hour}</GreenPrice>
+            <p>Price / 1 hour:</p><GreenPrice>{price_per_hour}$</GreenPrice>
             <HeartBtn onClick={toggleFavorite}>
              {isFavorites && authUser? 
              (

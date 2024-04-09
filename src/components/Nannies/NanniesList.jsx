@@ -16,9 +16,9 @@ export const NannyList = ({renderCard}) => {
 
     return(
         <ul>
-            {filteredNanny.slice(0, renderCard).map(nanny =>(
-                <li key={nanny.id}>
-                <NanniesCard card={nanny}/>
+            {filteredNanny.slice(0, renderCard).map(nanni =>(
+                <li key={nanni.id}>
+                <NanniesCard card={nanni}/>
                 </li>
             ))}
         </ul>

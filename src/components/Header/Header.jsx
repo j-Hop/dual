@@ -75,7 +75,7 @@ return(
         <li>
             <StyledLink  to='/nannies'>Nannies</StyledLink>
         </li>
-        {auth &&(
+        {authUser &&(
         <li>
         <StyledLink  to='/favorites'>Favorites</StyledLink>    
         </li>)}
