@@ -51,10 +51,7 @@ const Order = Yup.object({
 
 export const NanniesModal = ({ card, onRequestClose }) => {
   const [isTimeOpen, setTimeOpen] = useState(false);
-  const handleSubmit = (
-    { address, number, childAge, time, email, name, comment },
-    { resetForm }
-  ) => {
+  const handleSubmit = ({ resetForm }) => {
     toast.success(`Successfully sent date`, {
       position: 'top-right',
       duration: 5000,
@@ -113,12 +110,8 @@ export const NanniesModal = ({ card, onRequestClose }) => {
           </label>
 
           <label aria-label="Field for Child is age">
-            <CardStyleMini
-              name="Child is age"
-              type="number"
-              placeholder="Child is age"
-            />
-            <ErrMsg name="Child is age" component="div" />
+            <CardStyleMini type="number" placeholder="Child is age" />
+            <ErrMsg name="childAge" component="div" />
           </label>
 
           <label aria-label="Field for number">
@@ -143,11 +136,11 @@ export const NanniesModal = ({ card, onRequestClose }) => {
 
           <label aria-label="Field for Father is or mother is name">
             <CardStyledBig
-              name="Father is or mother is name"
+              name="name"
               type="text"
               placeholder="Father is or mother is name"
             />
-            <ErrMsg component="div" name="Father is or mother is name" />
+            <ErrMsg component="div" name="name" />
           </label>
 
           <label aria-label="Field for comment">
