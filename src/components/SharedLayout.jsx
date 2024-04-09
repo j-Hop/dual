@@ -11,12 +11,11 @@ padding: 0 64px;
 export const SharedLayout = () =>{
 return(
 <GlobalBox>
-    <main>
-    <Header>
+    <Header/>
+        <main>
         <Suspense fallback={<Loader/>}>
         <Outlet/>
         </Suspense>
-    </Header>
     </main>
 </GlobalBox>
 );
