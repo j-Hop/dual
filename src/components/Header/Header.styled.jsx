@@ -3,10 +3,8 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderBox = styled.header`
-  @media screen and (min-width: 320px) {
-    padding: ${theme.spacing(10)} ${theme.spacing(48)};
-    border: 1px solid rgba(251, 251, 251, 0.4);
-  }
+  padding: ${theme.spacing(10)} ${theme.spacing(48)};
+  border: 1px solid rgba(251, 251, 251, 0.4);
 `;
 
 export const Navigation = styled.div`
@@ -14,14 +12,12 @@ export const Navigation = styled.div`
   justify-content: space-between;
   align-items: center;
   white-space: nowrap;
-  @media screen and (min-width: 320px) {
-    padding: ${theme.spacing(5)};
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: column;
-    gap: ${theme.spacing(5)};
-    margin-bottom: ${theme.spacing(5)};
-  }
+  padding: ${theme.spacing(5)};
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  gap: ${theme.spacing(5)};
+  margin-bottom: ${theme.spacing(5)};
 `;
 
 export const NavList = styled.ul`
