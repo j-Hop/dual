@@ -10,28 +10,27 @@ import { Provider } from 'react-redux';
 import { persistor, store } from './redux/store';
 import './firebase';
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-            <ThemeProvider theme={theme}>
-                <BrowserRouter basename="/Nannies-service">
-                <App/>
-                <Toaster
-                toastOptions={{
-                    success : {
-                        iconTheme: { primary: 'green', secondary: 'white' },
-                        style: { color: 'white', background: 'green' },
-                    },
-                    error :{
-                        iconTheme: { primary: 'red', secondary: 'white' },
-                        style: { color: 'white', background: 'red' },
-                    },
-                }}
-                />
-                <GlobalStyle/>
-                </BrowserRouter>
-            </ThemeProvider>
-        </PersistGate>
-    </Provider>
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter basename="/dual">
+          <App />
+          <Toaster
+            toastOptions={{
+              success: {
+                iconTheme: { primary: 'green', secondary: 'white' },
+                style: { color: 'white', background: 'green' },
+              },
+              error: {
+                iconTheme: { primary: 'red', secondary: 'white' },
+                style: { color: 'white', background: 'red' },
+              },
+            }}
+          />
+          <GlobalStyle />
+        </BrowserRouter>
+      </ThemeProvider>
+    </PersistGate>
+  </Provider>
 );

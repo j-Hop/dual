@@ -10,7 +10,7 @@ margin-block-end:${theme.spacing(10)};
 `;
 
 export const StyledForm = styled(Form)`
-dispay:flex;
+display:flex;
 flex-direction: column;
 max-inline-size:440px;
 

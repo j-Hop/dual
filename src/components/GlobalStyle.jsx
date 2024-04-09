@@ -20,7 +20,7 @@ body{
 
     font-family: 'Helvetica Neue', sans-serif;
     font-weight: 400;
-    font-size:16px,
+    font-size:16px;
     font-style: normal;
     color : ${theme.colors.black};
     background: ${theme.colors.light};

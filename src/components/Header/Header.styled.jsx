@@ -77,7 +77,7 @@ margin: ${theme.spacing(7)} ${theme.spacing(19.5)};
 export const BtnRegistartion = styled.div`
 border-radius:${theme.radius.xl};
 background-color:${theme.colors.green};
-transition: color ${theme.transition}, background-color ${theme.transition},
+transition: color ${theme.transition}, background-color ${theme.transition};
 border:none;
 
 &:hover{
