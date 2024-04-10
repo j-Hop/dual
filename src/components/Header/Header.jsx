@@ -3,9 +3,9 @@ import { AuthModal } from '../Auth/AuthModal/AuthModal';
 import { Login } from '../Auth/LogIn';
 import { SignUp } from '../Auth/SignUp';
 import SpriteIcons from '../../images/sprite.svg';
-import toast from 'react-hot-toast';
+import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from '../../firebase';
-import { signOut, onAuthStateChanged } from 'firebase/auth';
+import toast from 'react-hot-toast';
 import {
   BtnBar,
   BtnLogIn,
@@ -22,7 +22,7 @@ import {
 
 export const Header = () => {
   const [isLoginModalOpen, setLoginModalOpen] = useState(false);
-  const { isRegistrModalOpen, setRegistrModalOpen } = useState(false);
+  const [isRegisterModalOpen, setRegisterModalOpen] = useState(false);
   const [authUser, setAuthUser] = useState(null);
 
   const openLoginModal = () => {
@@ -33,12 +33,12 @@ export const Header = () => {
     setLoginModalOpen(false);
   };
 
-  const openRegistrModal = () => {
-    setRegistrModalOpen(true);
+  const openRegisterModal = () => {
+    setRegisterModalOpen(true);
   };
 
-  const closeRegistrModal = () => {
-    setRegistrModalOpen(false);
+  const closeRegisterModal = () => {
+    setRegisterModalOpen(false);
   };
 
   useEffect(() => {
@@ -103,7 +103,7 @@ export const Header = () => {
               <BtnLogIn onClick={openLoginModal}>
                 <span>Log In</span>
               </BtnLogIn>
-              <BtnRegistartion onClick={openRegistrModal}>
+              <BtnRegistartion onClick={openRegisterModal}>
                 <span>Registration</span>
               </BtnRegistartion>
             </BtnBar>
@@ -119,10 +119,10 @@ export const Header = () => {
 
           <AuthModal
             id="reg"
-            isOpen={isRegistrModalOpen}
-            onRequestClose={closeRegistrModal}
+            isOpen={isRegisterModalOpen}
+            onRequestClose={closeRegisterModal}
           >
-            <SignUp onRequestClose={closeRegistrModal} />
+            <SignUp onRequestClose={closeRegisterModal} />
           </AuthModal>
         </div>
       </Navigation>

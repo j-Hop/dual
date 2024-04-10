@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { Form, ErrorMessage, Field } from 'formik';
 
 export const Title = styled.h2`
-  font-weight: 500;
   font-size: 24px;
   line-height: 1.2;
 `;
@@ -29,6 +28,7 @@ export const StyledInput = styled(Field)`
   outline: none;
   border: 1px solid rgba(17, 16, 28, 0.1);
   margin-block-end: ${theme.spacing(9)};
+  color: ${theme.colors.black};
 `;
 
 export const StyledInputPassword = styled(Field)`
@@ -38,6 +38,7 @@ export const StyledInputPassword = styled(Field)`
   outline: none;
   border: 1px solid rgba(17, 16, 28, 0.1);
   margin-block-end: ${theme.spacing(20)};
+  color: ${theme.colors.black};
 `;
 
 export const ErrMsg = styled(ErrorMessage)`
@@ -101,13 +102,13 @@ export const BtnSubmitGoogle = styled.button`
 
   &:hover {
     border-color: ${theme.colors.green};
-    color: ${theme.colors.green};
+    color: ${theme.colors.lightGreen};
   }
 `;
 
 export const GoogleIcon = styled.img`
-  margin-inline-start: ${theme.spacing(4)};
-  transform: translateY(50px);
+  margin-inline-start: 8px;
+  transform: translateY(3px);
   display: inline-block;
   inline-size: 20px;
   block-size: 20px;

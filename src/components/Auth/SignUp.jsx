@@ -60,7 +60,7 @@ export const SignUp = ({ onRequestClose }) => {
   return (
     <>
       <Formik
-        initialValues={{ user: '', email: '', password: '' }}
+        initialValues={{ name: '', email: '', password: '' }}
         validationSchema={Registration}
         onSubmit={handleSubmit}
       >
