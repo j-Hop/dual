@@ -66,20 +66,20 @@ export const SignUp = ({ onRequestclose }) => {
           <p>
             Thank you for your interest in our platform! In order to register,
             we need some information. Please provide us with the following
-            information.
+            information
           </p>
 
-          <label aria-label="Name for Registation">
+          <label aria-label="Name for registration">
             <StyledInput type="text" name="name" placeholder="Name" />
             <ErrMsg name="name" component="div" />
           </label>
 
-          <label aria-label="Email for Registration">
+          <label aria-label="Email for registration">
             <StyledInput type="email" name="email" placeholder="Email" />
             <ErrMsg name="email" component="div" />
           </label>
 
-          <PasswordLabel aria-label="Password for Registration">
+          <PasswordLabel aria-label="Password for registration">
             <StyledInput
               type={showPassword ? 'text' : 'password'}
               name="password"
