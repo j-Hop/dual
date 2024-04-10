@@ -22,7 +22,7 @@ import {
 
 export const Header = () => {
   const [isLoginModalOpen, setLoginModalOpen] = useState(false);
-  const { isRegistrationModalOpen, setRegistrationModalOpen } = useState(false);
+  const { isRegistrModalOpen, setRegistrModalOpen } = useState(false);
   const [authUser, setAuthUser] = useState(null);
 
   const openLoginModal = () => {
@@ -33,12 +33,12 @@ export const Header = () => {
     setLoginModalOpen(false);
   };
 
-  const openRegistrationModal = () => {
-    setRegistrationModalOpen(true);
+  const openRegistrModal = () => {
+    setRegistrModalOpen(true);
   };
 
-  const closeRegistrationModal = () => {
-    setRegistrationModalOpen(false);
+  const closeRegistrModal = () => {
+    setRegistrModalOpen(false);
   };
 
   useEffect(() => {
@@ -103,7 +103,7 @@ export const Header = () => {
               <BtnLogIn onClick={openLoginModal}>
                 <span>Log In</span>
               </BtnLogIn>
-              <BtnRegistartion onClick={openRegistrationModal}>
+              <BtnRegistartion onClick={openRegistrModal}>
                 <span>Registration</span>
               </BtnRegistartion>
             </BtnBar>
@@ -119,10 +119,10 @@ export const Header = () => {
 
           <AuthModal
             id="reg"
-            isOpen={isRegistrationModalOpen}
-            onRequestClose={closeRegistrationModal}
+            isOpen={isRegistrModalOpen}
+            onRequestClose={closeRegistrModal}
           >
-            <SignUp onRequestClose={closeRegistrationModal} />
+            <SignUp onRequestClose={closeRegistrModal} />
           </AuthModal>
         </div>
       </Navigation>
