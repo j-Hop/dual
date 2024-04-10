@@ -3036,88 +3036,90 @@ FIREBASE: `))}restoreState_(){this.tryAuth(),this.tryAppCheck();for(const e of t
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */const LB=5*60,FB=H1("authIdTokenMaxAge")||LB;let pw=null;const $B=t=>async e=>{const n=e&&await e.getIdTokenResult(),r=n&&(new Date().getTime()-Date.parse(n.issuedAtTime))/1e3;if(r&&r>FB)return;const i=n==null?void 0:n.token;pw!==i&&(pw=i,await fetch(t,{method:i?"POST":"DELETE",headers:i?{Authorization:`Bearer ${i}`}:{}}))};function jB(t=Z1()){const e=Ag(t,"auth");if(e.isInitialized())return e.getImmediate();const n=oW(t,{popupRedirectResolver:AB,persistence:[BW,RW,Wb]}),r=H1("authTokenSyncURL");if(r&&typeof isSecureContext=="boolean"&&isSecureContext){const s=new URL(r,location.origin);if(location.origin===s.origin){const o=$B(s.toString());bW(n,o,()=>o(n.currentUser)),TW(n,a=>o(a))}}const i=B1("auth");return i&&lW(n,`http://${i}`),n}function UB(){var t,e;return(e=(t=document.getElementsByTagName("head"))===null||t===void 0?void 0:t[0])!==null&&e!==void 0?e:document}Z4({loadJS(t){return new Promise((e,n)=>{const r=document.createElement("script");r.setAttribute("src",t),r.onload=e,r.onerror=i=>{const s=dn("internal-error");s.customData=i,n(s)},r.type="text/javascript",r.charset="UTF-8",UB().appendChild(r)})},gapiScript:"https://apis.google.com/js/api.js",recaptchaV2Script:"https://www.google.com/recaptcha/api.js",recaptchaEnterpriseScript:"https://www.google.com/recaptcha/enterprise.js?render="});MB("Browser");const{VITE_API_KEY:zB,VITE_AUTH_DOMAIN:WB,VITE_DATABASE_URL:BB,VITE_PROJECT_ID:VB,VITE_STORAGE_BUCKET:HB,VITE_MESSAGING_SENDER_ID:GB,VITE_APP_ID:KB}={VITE_STORAGE_BUCKET:"nanny-service-da265.appspot.com",VITE_AUTH_DOMAIN:"nanny-service-da265.firebaseapp.com",VITE_PROJECT_ID:"nanny-service-da265",VITE_APP_ID:"1:894784069149:web:5a23dcc8e153f87d3130f4",VITE_API_KEY:"AIzaSyDnrnsrQm63x_vj8bF1eS_gRa038_zsdkw",VITE_DATABASE_URL:"https://nanny-service-da265-default-rtdb.europe-west1.firebasedatabase.app",VITE_MESSAGING_SENDER_ID:"894784069149",BASE_URL:"/dual/",MODE:"production",DEV:!1,PROD:!0,SSR:!1},qB={apiKey:zB,authDomain:WB,databaseURL:BB,projectId:VB,storageBucket:HB,messagingSenderId:GB,appId:KB},Qb=J1(qB),to=jB(Qb),YB=new Dn;yb(Qb);const Xb=we.h2`
-font-weight: 500;
-font-size: 24px;
-line-height:1.2;
-margin-block-end:${L.spacing(10)};
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-block-end: ${L.spacing(10)};
 `,Jb=we(T1)`
-display:flex;
-flex-direction: column;
-max-inline-size:440px;
+  display: flex;
+  flex-direction: column;
+  max-inline-size: 440px;
 
-p{
-    color : rgba(17, 16, 28, 0.5);
-    font-weight:400;
+  p {
+    color: rgba(17, 16, 28, 0.5);
+    font-weight: 400;
     font-size: 16px;
-    line-height:1.25;
-}
+    line-height: 1.25;
+  }
 `,oa=we(VL)`
-inline-size: 100%;
-padding: ${L.spacing(8)} ${L.spacing(9)};
-border-radius: ${L.radius.xxs};
-outline:none;
-border: 1px solid rgba(17, 16, 28, 0.1);
-margin-block-end:${L.spacing(9)};
+  inline-size: 100%;
+  padding: ${L.spacing(8)} ${L.spacing(9)};
+  border-radius: ${L.radius.xxs};
+  outline: none;
+  border: 1px solid rgba(17, 16, 28, 0.1);
+  margin-block-end: ${L.spacing(9)};
 `,aa=we(XL)`
-font-size:12px;
-margin-block-end:${L.spacing(9)};
-color:${L.colors.error};
+  font-size: 12px;
+  margin-block-end: ${L.spacing(9)};
+  color: ${L.colors.error};
 `,Zb=we.label`
-position:relative;
+  position: relative;
 `,eI=we.button`
-border:none;
-background:none;
-position:absolute;
-top:16px;
-right:18px;
-transform: translateY(-50%);
-transition: fill ${L.transition};
+  border: none;
+  background: none;
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  transform: translateY(-50%);
+  transition: fill ${L.transition};
 
-&:hover {
+  &:hover {
     fill: ${L.colors.green};
   }
 `,tI=we.button`
-padding:${L.spacing(8)};
-border:none;
-border-radius:${L.radius.xl};
-background-color: ${L.colors.green};
-transition: background-color ${L.transition};
+  padding: ${L.spacing(8)};
+  border: none;
+  border-radius: ${L.radius.xl};
+  background-color: ${L.colors.green};
+  transition: background-color ${L.transition};
 
-&:hover{
+  &:hover {
     background-color: ${L.colors.lightGreen};
-}
+  }
 
-span{
-    font-weight:500;
-    line-height:1.25;
-    font-size:16px;
-    color:${L.colors.light};
-    white-space:nowrap;
-}
+  span {
+    font-weight: 500;
+    line-height: 1.25;
+    font-size: 16px;
+    color: ${L.colors.light};
+    white-space: nowrap;
+  }
 `,QB=we.button`
-margin-block-start: ${L.spacing(9)};
-padding-block: ${L.spacing(8)};
-inline-size: 100%;
-background-color: transparent;
-border: 1px solid rgba(18, 20, 23, 0.1);
-border-radius: ${L.radius.xxs};
+  margin-block-start: ${L.spacing(9)};
+  padding-block: ${L.spacing(8)};
+  inline-size: 100%;
+  background-color: transparent;
+  border: 1px solid rgba(18, 20, 23, 0.1);
+  border-radius: ${L.radius.xxs};
 
-font-size: 18px;
-font-weight: 700;
-line-height: 1.555;
-transition: border-color ${L.transition}, color ${L.transition};
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.555;
+  transition:
+    border-color ${L.transition},
+    color ${L.transition};
 
-&:hover {
-  border-color: ${L.colors.green};
-  color: ${L.colors.green};
-}
+  &:hover {
+    border-color: ${L.colors.green};
+    color: ${L.colors.green};
+  }
 `,XB=we.img`
-margin-inline-start: ${L.spacing(4)};
-transform: translateY(50px);
-display: inline-block;
-inline-size: 20px;
-block-size: 20px;
-`,JB=bg({email:Os().email("Invalid email adress").required("This is a required field"),password:Os().min(8,"Must least 8 symbols").max(64,"At most 64 symbols").required("This is a required field")}),ZB=({onRequestClose:t})=>{const[e,n]=w.useState(!1),r=({email:s,password:o},{resetForm:a})=>{CW(to,s,o).then(l=>{Wr.success(`Welcome ${l.user.email}`,{position:"top-right",duration:5e3,icon:"👋"}),a(),t()}).catch(l=>Wr.error(`Have a problem, ${l}`,{position:"top-right",duration:5e3}))},i=()=>{n(s=>!s)};return x.jsx(C1,{initialValues:{email:"",password:""},validationShema:JB,onSubmit:r,children:x.jsxs(Jb,{children:[x.jsx(Xb,{children:"Log In"}),x.jsx("p",{children:"Welcome back! Please enter your credentials to access your account and continue your babysitter search."}),x.jsxs("label",{children:[x.jsx(oa,{name:"email",type:"email",placeholder:"Email"}),x.jsx(aa,{name:"email",component:"div"})]}),x.jsxs(Zb,{children:[x.jsx(oa,{name:"password",type:e?"text":"password",placeholder:"Password"}),x.jsx(aa,{name:"password",component:"div"}),x.jsx(eI,{onClick:()=>i(),type:"password",children:x.jsx("svg",{width:"20",height:"20",children:x.jsx("use",{xlinkHref:e?`${qs}#icon-eye`:`${qs}#icon-eye-off`})})})]}),x.jsx(tI,{type:"submit",children:x.jsx("span",{children:"Log In"})})]})})},e6="/dual/assets/google-0d1cd802.svg",t6=({onRequestClose:t})=>{function e(){qW(to,YB).then(()=>{t()}).catch(n=>{Wr.error(`Not found account!, ${n}`,{position:"top-right",duration:5e3})})}return x.jsxs(QB,{onClick:e,children:["Continue With",x.jsx(XB,{src:e6,alt:"google"})]})},n6=bg({name:Os().min(4,"Minimum 4 letter").max(20,"Maximum 20 letter").required("This ia a required field"),email:Os().email("Invalis email adress").required("This is a required field"),password:Os().min(4,"Must least 4 symbols").max(64,"At most 64 symbols").required("This is a required field")}),r6=({onRequestclose:t})=>{const[e,n]=w.useState(!1),r=({name:s,email:o,password:a},{resetForm:l})=>{SW(to,o,a).then(Wr.success(`Welcome, ${s}`,{duration:5e3,position:"top-right",icon:"👋"})),l(),t().catch(u=>{Wr.error(`Have a problem, ${u}`,{duration:5e3,position:"top-right"})})},i=()=>{n(s=>!s)};return x.jsxs(x.Fragment,{children:[x.jsx(C1,{initialValues:{user:"",email:"",password:""},validationSchema:n6,onSubmit:r,children:x.jsxs(Jb,{children:[x.jsx(Xb,{children:"Registration"}),x.jsx("p",{children:"Thank you for your interest in our platform! In order to register, we need some information. Please provide us with the following information."}),x.jsxs("label",{"aria-label":"Name for Registation",children:[x.jsx(oa,{type:"text",name:"name",placeholder:"Name"}),x.jsx(aa,{component:"div",name:"name"})]}),x.jsxs("label",{"aria-label":"Email for Registration",children:[x.jsx(oa,{type:"email",name:"email",placeholder:"Email"}),x.jsx(aa,{component:"div",name:"email"})]}),x.jsxs(Zb,{"aria-label":"Password for Registration",children:[x.jsx(oa,{type:e?"text":"password",name:"password",placeholder:"Password"}),x.jsx(aa,{component:"div",name:"password"}),x.jsx(eI,{onClick:()=>i(),type:"button",children:x.jsx("svg",{width:"20",height:"20",children:x.jsx("use",{xlinkHref:e?`${qs}#icon-eye`:`${qs}#icon-eye-off`})})})]}),x.jsx(tI,{type:"submit",children:x.jsx("span",{children:"Sign Up"})})]})}),x.jsx(t6,{onRequestClose:t})]})},i6=we.header`
+  margin-inline-start: ${L.spacing(4)};
+  transform: translateY(50px);
+  display: inline-block;
+  inline-size: 20px;
+  block-size: 20px;
+`,JB=bg({email:Os().email("Invalid email adress").required("This is a required field"),password:Os().min(8,"Must least 8 symbols").max(64,"At most 64 symbols").required("This is a required field")}),ZB=({onRequestClose:t})=>{const[e,n]=w.useState(!1),r=({email:s,password:o},{resetForm:a})=>{CW(to,s,o).then(l=>{Wr.success(`Welcome ${l.user.email}`,{position:"top-right",duration:5e3,icon:"👋"}),a(),t()}).catch(l=>Wr.error(`Have a problem, ${l}`,{position:"top-right",duration:5e3}))},i=()=>{n(s=>!s)};return x.jsx(C1,{initialValues:{email:"",password:""},validationShema:JB,onSubmit:r,children:x.jsxs(Jb,{children:[x.jsx(Xb,{children:"Log In"}),x.jsx("p",{children:"Welcome back! Please enter your credentials to access your account and continue your babysitter search."}),x.jsxs("label",{children:[x.jsx(oa,{name:"email",type:"email",placeholder:"Email"}),x.jsx(aa,{name:"email",component:"div"})]}),x.jsxs(Zb,{children:[x.jsx(oa,{name:"password",type:e?"text":"password",placeholder:"Password"}),x.jsx(aa,{name:"password",component:"div"}),x.jsx(eI,{onClick:()=>i(),type:"password",children:x.jsx("svg",{width:"20",height:"20",children:x.jsx("use",{xlinkHref:e?`${qs}#icon-eye`:`${qs}#icon-eye-off`})})})]}),x.jsx(tI,{type:"submit",children:x.jsx("span",{children:"Log In"})})]})})},e6="/dual/assets/google-0d1cd802.svg",t6=({onRequestClose:t})=>{function e(){qW(to,YB).then(()=>{t()}).catch(n=>{Wr.error(`Not found account!, ${n}`,{position:"top-right",duration:5e3})})}return x.jsxs(QB,{onClick:e,children:["Continue With",x.jsx(XB,{src:e6,alt:"google"})]})},n6=bg({name:Os().min(4,"Minimum 4 letter").max(20,"Maximum 20 letter").required("This ia a required field"),email:Os().email("Invalis email adress").required("This is a required field"),password:Os().min(4,"Must least 4 symbols").max(64,"At most 64 symbols").required("This is a required field")}),r6=({onRequestclose:t})=>{const[e,n]=w.useState(!1),r=({name:s,email:o,password:a},{resetForm:l})=>{SW(to,o,a).then(Wr.success(`Welcome, ${s}`,{duration:5e3,position:"top-right",icon:"👋"})),l(),t().catch(u=>{Wr.error(`Have a problem, ${u}`,{duration:5e3,position:"top-right"})})},i=()=>{n(s=>!s)};return x.jsxs(x.Fragment,{children:[x.jsx(C1,{initialValues:{user:"",email:"",password:""},validationSchema:n6,onSubmit:r,children:x.jsxs(Jb,{children:[x.jsx(Xb,{children:"Registration"}),x.jsx("p",{children:"Thank you for your interest in our platform! In order to register, we need some information. Please provide us with the following information."}),x.jsxs("label",{"aria-label":"Name for Registation",children:[x.jsx(oa,{type:"text",name:"name",placeholder:"Name"}),x.jsx(aa,{component:"div",name:"name"})]}),x.jsxs("label",{"aria-label":"Email for Registration",children:[x.jsx(oa,{type:"email",name:"email",placeholder:"Email"}),x.jsx(aa,{component:"div",name:"email"})]}),x.jsxs(Zb,{"aria-label":"Password for Registration",children:[x.jsx(oa,{name:"password",type:e?"text":"password",placeholder:"Password"}),x.jsx(aa,{name:"password",component:"div"}),x.jsx(eI,{onClick:()=>i(),type:"password",children:x.jsx("svg",{width:"20",height:"20",children:x.jsx("use",{xlinkHref:e?`${qs}#icon-eye`:`${qs}#icon-eye-off`})})})]}),x.jsx(tI,{type:"submit",children:x.jsx("span",{children:"Sign Up"})})]})}),x.jsx(t6,{onRequestClose:t})]})},i6=we.header`
   padding: ${L.spacing(10)} ${L.spacing(48)};
   border: 1px solid rgba(251, 251, 251, 0.4);
 `,s6=we.div`
@@ -3140,13 +3142,14 @@ block-size: 20px;
     color: ${L.colors.primary};
   }
 
-  &:active {
+  &.active {
     color: ${L.colors.lightGreen};
   }
 `,a6=we.h1`
   font-size: 24px;
   font-weight: 500;
   line-height: 1.16;
+  color: ${L.colors.light};
 `,l6=we.img`
   display: inline-block;
   inline-size: 40px;
@@ -3206,7 +3209,7 @@ block-size: 20px;
   -webkit-text-fill-color: transparent;
 `,p6=()=>{const[t,e]=w.useState(!1),{isRegistrationModalOpen:n,setRegistrationModalOpen:r}=w.useState(!1),[i,s]=w.useState(null),o=()=>{e(!0)},a=()=>{e(!1)},l=()=>{r(!0)},u=()=>{r(!1)};w.useEffect(()=>{const c=IW(to,f=>{s(f||null)});return()=>c()},[]);const d=()=>{kW(to).then(()=>Wr.success("See you!",{position:"top-right",duration:5e3,icon:"🖐️"})).catch(c=>Wr.error(`Have a problem, ${c}`,{duration:5e3,position:"top-right"}))};return x.jsx(i6,{children:x.jsxs(s6,{children:[x.jsx(a6,{children:"Nanny.Services"}),x.jsxs(o6,{children:[x.jsx("li",{children:x.jsx(Wf,{to:"/",children:"Home"})}),x.jsx("li",{children:x.jsx(Wf,{to:"/nannies",children:"Nannies"})}),i&&x.jsx("li",{children:x.jsx(Wf,{to:"/favorites",children:"Favorites"})})]}),x.jsxs("div",{children:[i?x.jsxs(x.Fragment,{children:[x.jsx(l6,{children:x.jsx("svg",{width:"16",height:"16",children:x.jsx("use",{xlinkHref:`${qs}#icon-mdi_user`})})}),x.jsx(h6,{children:i.name}),x.jsx(d6,{onClick:d,children:x.jsx("span",{children:"Log Out"})})]}):x.jsxs(f6,{children:[x.jsx(u6,{onClick:o,children:x.jsx("span",{children:"Log In"})}),x.jsx(c6,{onClick:l,children:x.jsx("span",{children:"Registration"})})]}),x.jsx(v_,{id:"log",isOpen:t,onRequestClose:a,children:x.jsx(ZB,{onRequestClose:a})}),x.jsx(v_,{id:"reg",isOpen:n,onRequestClose:u,children:x.jsx(r6,{onRequestclose:u})})]})]})})},m6=we.div`
 padding: 0 64px;
-`,g6=()=>x.jsxs(m6,{children:[x.jsx(p6,{}),x.jsx("main",{children:x.jsx(w.Suspense,{fallback:x.jsx(kR,{}),children:x.jsx(nP,{})})})]}),y6=({children:t})=>to?t:x.jsx(tP,{to:"/"}),v6=w.lazy(()=>qc(()=>import("./HomePage-fc58e2f2.js"),[])),_6=w.lazy(()=>qc(()=>import("./NanniesPage-481fff2f.js"),["assets/NanniesPage-481fff2f.js","assets/NanniesCard-3bff109a.js"])),w6=w.lazy(()=>qc(()=>import("./FavoritePage-6869330d.js"),["assets/FavoritePage-6869330d.js","assets/NanniesCard-3bff109a.js"])),E6=w.lazy(()=>qc(()=>import("./NotFound-44f891b7.js"),[])),S6=()=>x.jsx(iP,{children:x.jsxs(ss,{path:"/",element:x.jsx(g6,{}),children:[x.jsx(ss,{index:!0,element:x.jsx(v6,{})}),x.jsx(ss,{path:"nannies",element:x.jsx(_6,{})}),x.jsx(ss,{path:"favorites",element:x.jsx(y6,{children:x.jsx(w6,{})})}),x.jsx(ss,{path:"*",element:x.jsx(E6,{})})]})});const C6=vR`
+`,g6=()=>x.jsxs(m6,{children:[x.jsx(p6,{}),x.jsx("main",{children:x.jsx(w.Suspense,{fallback:x.jsx(kR,{}),children:x.jsx(nP,{})})})]}),y6=({children:t})=>to?t:x.jsx(tP,{to:"/"}),v6=w.lazy(()=>qc(()=>import("./HomePage-2621848b.js"),[])),_6=w.lazy(()=>qc(()=>import("./NanniesPage-b80aa546.js"),["assets/NanniesPage-b80aa546.js","assets/NanniesCard-59ac57d4.js"])),w6=w.lazy(()=>qc(()=>import("./FavoritePage-96396a07.js"),["assets/FavoritePage-96396a07.js","assets/NanniesCard-59ac57d4.js"])),E6=w.lazy(()=>qc(()=>import("./NotFound-48c6112e.js"),[])),S6=()=>x.jsx(iP,{children:x.jsxs(ss,{path:"/",element:x.jsx(g6,{}),children:[x.jsx(ss,{index:!0,element:x.jsx(v6,{})}),x.jsx(ss,{path:"nannies",element:x.jsx(_6,{})}),x.jsx(ss,{path:"favorites",element:x.jsx(y6,{children:x.jsx(w6,{})})}),x.jsx(ss,{path:"*",element:x.jsx(E6,{})})]})});const C6=vR`
 *,
 *::before,
 *::after {
