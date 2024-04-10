@@ -13,9 +13,7 @@ export const Navigation = styled.div`
   align-items: center;
   white-space: nowrap;
   padding: ${theme.spacing(5)};
-  flex-wrap: wrap;
   justify-content: center;
-  flex-direction: column;
   gap: ${theme.spacing(5)};
   margin-bottom: ${theme.spacing(5)};
 `;
