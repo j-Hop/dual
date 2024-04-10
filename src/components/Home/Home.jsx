@@ -27,7 +27,7 @@ export const Home = () => {
           <p>Find Babysitters Online for All Occasions</p>
           <BtnStart to="/nannies" onChange={handleToggleArrow}>
             <span>Get started</span>
-            <svg width="5" height="22">
+            <svg width="18" height="22">
               <use
                 xlinkHref={
                   changeHover
