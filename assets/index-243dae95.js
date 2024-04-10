@@ -3126,9 +3126,7 @@ block-size: 20px;
   align-items: center;
   white-space: nowrap;
   padding: ${L.spacing(5)};
-  flex-wrap: wrap;
   justify-content: center;
-  flex-direction: column;
   gap: ${L.spacing(5)};
   margin-bottom: ${L.spacing(5)};
 `,o6=we.ul`
@@ -3208,7 +3206,7 @@ block-size: 20px;
   -webkit-text-fill-color: transparent;
 `,p6=()=>{const[t,e]=w.useState(!1),{isRegistrationModalOpen:n,setRegistrationModalOpen:r}=w.useState(!1),[i,s]=w.useState(null),o=()=>{e(!0)},a=()=>{e(!1)},l=()=>{r(!0)},u=()=>{r(!1)};w.useEffect(()=>{const c=IW(to,f=>{s(f||null)});return()=>c()},[]);const d=()=>{kW(to).then(()=>Wr.success("See you!",{position:"top-right",duration:5e3,icon:"🖐️"})).catch(c=>Wr.error(`Have a problem, ${c}`,{duration:5e3,position:"top-right"}))};return x.jsx(i6,{children:x.jsxs(s6,{children:[x.jsx(a6,{children:"Nanny.Services"}),x.jsxs(o6,{children:[x.jsx("li",{children:x.jsx(Wf,{to:"/",children:"Home"})}),x.jsx("li",{children:x.jsx(Wf,{to:"/nannies",children:"Nannies"})}),i&&x.jsx("li",{children:x.jsx(Wf,{to:"/favorites",children:"Favorites"})})]}),x.jsxs("div",{children:[i?x.jsxs(x.Fragment,{children:[x.jsx(l6,{children:x.jsx("svg",{width:"16",height:"16",children:x.jsx("use",{xlinkHref:`${qs}#icon-mdi_user`})})}),x.jsx(h6,{children:i.name}),x.jsx(d6,{onClick:d,children:x.jsx("span",{children:"Log Out"})})]}):x.jsxs(f6,{children:[x.jsx(u6,{onClick:o,children:x.jsx("span",{children:"Log In"})}),x.jsx(c6,{onClick:l,children:x.jsx("span",{children:"Registration"})})]}),x.jsx(v_,{id:"log",isOpen:t,onRequestClose:a,children:x.jsx(ZB,{onRequestClose:a})}),x.jsx(v_,{id:"reg",isOpen:n,onRequestClose:u,children:x.jsx(r6,{onRequestclose:u})})]})]})})},m6=we.div`
 padding: 0 64px;
-`,g6=()=>x.jsxs(m6,{children:[x.jsx(p6,{}),x.jsx("main",{children:x.jsx(w.Suspense,{fallback:x.jsx(kR,{}),children:x.jsx(nP,{})})})]}),y6=({children:t})=>to?t:x.jsx(tP,{to:"/"}),v6=w.lazy(()=>qc(()=>import("./HomePage-d477409c.js"),[])),_6=w.lazy(()=>qc(()=>import("./NanniesPage-b3b6723c.js"),["assets/NanniesPage-b3b6723c.js","assets/NanniesCard-0253adc0.js"])),w6=w.lazy(()=>qc(()=>import("./FavoritePage-7a1b2c31.js"),["assets/FavoritePage-7a1b2c31.js","assets/NanniesCard-0253adc0.js"])),E6=w.lazy(()=>qc(()=>import("./NotFound-b3be3dcd.js"),[])),S6=()=>x.jsx(iP,{children:x.jsxs(ss,{path:"/",element:x.jsx(g6,{}),children:[x.jsx(ss,{index:!0,element:x.jsx(v6,{})}),x.jsx(ss,{path:"nannies",element:x.jsx(_6,{})}),x.jsx(ss,{path:"favorites",element:x.jsx(y6,{children:x.jsx(w6,{})})}),x.jsx(ss,{path:"*",element:x.jsx(E6,{})})]})});const C6=vR`
+`,g6=()=>x.jsxs(m6,{children:[x.jsx(p6,{}),x.jsx("main",{children:x.jsx(w.Suspense,{fallback:x.jsx(kR,{}),children:x.jsx(nP,{})})})]}),y6=({children:t})=>to?t:x.jsx(tP,{to:"/"}),v6=w.lazy(()=>qc(()=>import("./HomePage-fc58e2f2.js"),[])),_6=w.lazy(()=>qc(()=>import("./NanniesPage-481fff2f.js"),["assets/NanniesPage-481fff2f.js","assets/NanniesCard-3bff109a.js"])),w6=w.lazy(()=>qc(()=>import("./FavoritePage-6869330d.js"),["assets/FavoritePage-6869330d.js","assets/NanniesCard-3bff109a.js"])),E6=w.lazy(()=>qc(()=>import("./NotFound-44f891b7.js"),[])),S6=()=>x.jsx(iP,{children:x.jsxs(ss,{path:"/",element:x.jsx(g6,{}),children:[x.jsx(ss,{index:!0,element:x.jsx(v6,{})}),x.jsx(ss,{path:"nannies",element:x.jsx(_6,{})}),x.jsx(ss,{path:"favorites",element:x.jsx(y6,{children:x.jsx(w6,{})})}),x.jsx(ss,{path:"*",element:x.jsx(E6,{})})]})});const C6=vR`
 *,
 *::before,
 *::after {
