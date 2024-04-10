@@ -71,22 +71,22 @@ export const SignUp = ({ onRequestclose }) => {
 
           <label aria-label="Name for Registation">
             <StyledInput type="text" name="name" placeholder="Name" />
-            <ErrMsg component="div" name="name" />
+            <ErrMsg name="name" component="div" />
           </label>
 
           <label aria-label="Email for Registration">
             <StyledInput type="email" name="email" placeholder="Email" />
-            <ErrMsg component="div" name="email" />
+            <ErrMsg name="email" component="div" />
           </label>
 
           <PasswordLabel aria-label="Password for Registration">
             <StyledInput
-              name="password"
               type={showPassword ? 'text' : 'password'}
+              name="password"
               placeholder="Password"
             />
             <ErrMsg name="password" component="div" />
-            <EyeBtn onClick={() => handleTogglePassword()} type="password">
+            <EyeBtn onClick={() => handleTogglePassword()} type="button">
               <svg width="20" height="20">
                 <use
                   xlinkHref={
