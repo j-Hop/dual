@@ -45,8 +45,8 @@ export const EyeBtn = styled.button`
   border: none;
   background: none;
   position: absolute;
-  top: 16px;
-  right: 18px;
+  top: 40%;
+  right: 5%;
   transform: translateY(-50%);
   transition: fill ${theme.transition};
 
