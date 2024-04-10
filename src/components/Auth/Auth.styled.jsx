@@ -54,7 +54,7 @@ export const EyeBtn = styled.button`
   border: none;
   background: none;
   position: absolute;
-  top: 40%;
+  top: 30%;
   right: 5%;
   transform: translateY(-50%);
   transition: fill ${theme.transition};
