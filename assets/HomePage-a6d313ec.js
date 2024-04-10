@@ -1,4 +1,4 @@
-import{s as e,t as n,N as a,r as l,j as i,S as o}from"./index-d06c76ea.js";const g="/dual/assets/Rectangle 1-2557fb2d.png",d=e.div`
+import{s as e,t as n,N as a,r as l,j as i,S as o}from"./index-a00ef92a.js";const g="/dual/assets/Rectangle 1-2557fb2d.png",d=e.div`
   padding: ${n.spacing(32)};
   max-inline-size: 1380px;
   background-color: ${n.colors.green};
@@ -81,4 +81,4 @@ import{s as e,t as n,N as a,r as l,j as i,S as o}from"./index-d06c76ea.js";const
   margin-inline-end: ${n.spacing(8)};
 `,f=e.svg`
   padding: ${n.spacing(9.75)} ${n.spacing(8.5)};
-`,u=()=>{const[s,r]=l.useState(!1),c=()=>{r(t=>!t)};return i.jsx(d,{children:i.jsxs($,{children:[i.jsxs(h,{children:[i.jsx("h2",{children:"Make Life Easier for the Family:"}),i.jsx("p",{children:"Find Babysitters Online for All Occasions"}),i.jsxs(x,{to:"/nannies",onChange:c,children:[i.jsx("span",{children:"Get started"}),i.jsx("svg",{width:"18",height:"22",children:i.jsx("use",{xlinkHref:s?`${o}#icon-Arrow-up`:`${o}#icon-Arrow-inline`})})]})]}),i.jsx(p,{src:g,alt:"home"}),i.jsxs(b,{children:[i.jsx(m,{children:i.jsx(f,{children:i.jsx("svg",{width:"20",height:"15",children:i.jsx("use",{xlinkHref:`${o}#icon-check`})})})}),i.jsx("p",{children:"Experienced nannies"}),i.jsx("h2",{children:"15,000"})]})]})})};function k(){return i.jsx(u,{})}export{k as default};
+`,u=()=>{const[s,r]=l.useState(!1),c=()=>{r(t=>!t)};return i.jsx(d,{children:i.jsxs($,{children:[i.jsxs(h,{children:[i.jsx("h2",{children:"Make Life Easier for the Family:"}),i.jsx("p",{children:"Find Babysitters Online for All Occasions"}),i.jsxs(x,{to:"/nannies",onChange:c,children:[i.jsx("span",{children:"Get started"}),i.jsx("svg",{width:"15",height:"22",children:i.jsx("use",{xlinkHref:s?`${o}#icon-Arrow-up`:`${o}#icon-Arrow-inline`})})]})]}),i.jsx(p,{src:g,alt:"home"}),i.jsxs(b,{children:[i.jsx(m,{children:i.jsx(f,{children:i.jsx("svg",{width:"20",height:"15",children:i.jsx("use",{xlinkHref:`${o}#icon-check`})})})}),i.jsx("p",{children:"Experienced nannies"}),i.jsx("h2",{children:"15,000"})]})]})})};function k(){return i.jsx(u,{})}export{k as default};
