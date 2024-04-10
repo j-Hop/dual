@@ -30,24 +30,26 @@ export const Registration = Yup.object({
     .required(`This is a required field`),
 });
 
-export const SignUp = ({ onRequestclose }) => {
+export const SignUp = ({ onRequestClose }) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleSubmit = ({ name, email, password }, { resetForm }) => {
-    createUserWithEmailAndPassword(auth, email, password).then(
-      toast.success(`Welcome, ${name}`, {
-        duration: 5000,
-        position: 'top-right',
-        icon: '👋',
-      })
-    );
-    resetForm();
-    onRequestclose().catch((error) => {
-      toast.error(`Have a problem, ${error}`, {
-        duration: 5000,
-        position: 'top-right',
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(
+        toast.success(`Welcome, ${name}`, {
+          duration: 5000,
+          position: 'top-right',
+          icon: '👋',
+        }),
+        resetForm(),
+        onRequestClose()
+      )
+      .catch((error) => {
+        toast.error(`Have a problem, ${error}`, {
+          duration: 5000,
+          position: 'top-right',
+        });
       });
-    });
   };
 
   const handleTogglePassword = () => {
@@ -104,7 +106,7 @@ export const SignUp = ({ onRequestclose }) => {
           </BtnSubmit>
         </StyledForm>
       </Formik>
-      <AuthProvider onRequestClose={onRequestclose} />
+      <AuthProvider onRequestClose={onRequestClose} />
     </>
   );
 };
