@@ -116,12 +116,13 @@ export const Header = () => {
           >
             <Login onRequestClose={closeLoginModal} />
           </AuthModal>
+
           <AuthModal
             id="reg"
             isOpen={isRegistrationModalOpen}
             onRequestClose={closeRegistrationModal}
           >
-            <SignUp onRequestclose={closeRegistrationModal} />
+            <SignUp onRequestClose={closeRegistrationModal} />
           </AuthModal>
         </div>
       </Navigation>
