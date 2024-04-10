@@ -31,8 +31,8 @@ export const Home = () => {
               <use
                 xlinkHref={
                   changeHover
-                    ? `${SpriteIcon}#icon-Arrow-up`
-                    : `${SpriteIcon}#icon-Arrow-inline`
+                    ? `${SpriteIcon}#icon-Arrow-inline`
+                    : `${SpriteIcon}#icon-Arrow-up`
                 }
               />
             </svg>
