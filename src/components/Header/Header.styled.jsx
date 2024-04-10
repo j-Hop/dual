@@ -31,7 +31,7 @@ export const StyledLink = styled(NavLink)`
     color: ${theme.colors.primary};
   }
 
-  &:active {
+  &.active {
     color: ${theme.colors.lightGreen};
   }
 `;
@@ -40,6 +40,7 @@ export const Logo = styled.h1`
   font-size: 24px;
   font-weight: 500;
   line-height: 1.16;
+  color: ${theme.colors.light};
 `;
 
 export const IconUser = styled.img`
