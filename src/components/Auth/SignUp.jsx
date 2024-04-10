@@ -11,6 +11,7 @@ import {
   EyeBtn,
   ErrMsg,
   PasswordLabel,
+  StyledInputPassword,
 } from './Auth.styled';
 import { auth } from '../../firebase';
 import { AuthProvider } from './Auth';
@@ -82,7 +83,7 @@ export const SignUp = ({ onRequestClose }) => {
           </label>
 
           <PasswordLabel aria-label="Password for registration">
-            <StyledInput
+            <StyledInputPassword
               type={showPassword ? 'text' : 'password'}
               name="password"
               placeholder="Password"

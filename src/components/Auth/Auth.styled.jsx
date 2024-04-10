@@ -6,7 +6,6 @@ export const Title = styled.h2`
   font-weight: 500;
   font-size: 24px;
   line-height: 1.2;
-  margin-block-end: ${theme.spacing(10)};
 `;
 
 export const StyledForm = styled(Form)`
@@ -19,6 +18,7 @@ export const StyledForm = styled(Form)`
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
+    margin-block-end: ${theme.spacing(20)};
   }
 `;
 
@@ -29,6 +29,15 @@ export const StyledInput = styled(Field)`
   outline: none;
   border: 1px solid rgba(17, 16, 28, 0.1);
   margin-block-end: ${theme.spacing(9)};
+`;
+
+export const StyledInputPassword = styled(Field)`
+  inline-size: 100%;
+  padding: ${theme.spacing(8)} ${theme.spacing(9)};
+  border-radius: ${theme.radius.xxs};
+  outline: none;
+  border: 1px solid rgba(17, 16, 28, 0.1);
+  margin-block-end: ${theme.spacing(20)};
 `;
 
 export const ErrMsg = styled(ErrorMessage)`

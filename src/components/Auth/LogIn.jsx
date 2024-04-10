@@ -13,6 +13,7 @@ import {
   BtnSubmit,
   ErrMsg,
   PasswordLabel,
+  StyledInputPassword,
 } from './Auth.styled';
 
 const loginSchema = Yup.object({
@@ -71,7 +72,7 @@ export const Login = ({ onRequestClose }) => {
         </label>
 
         <PasswordLabel>
-          <StyledInput
+          <StyledInputPassword
             name="password"
             type={showPassword ? 'text' : 'password'}
             placeholder="Password"
