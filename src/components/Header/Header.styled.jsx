@@ -13,7 +13,6 @@ export const Navigation = styled.div`
   align-items: center;
   white-space: nowrap;
   padding: ${theme.spacing(5)};
-  justify-content: center;
   gap: ${theme.spacing(5)};
   margin-bottom: ${theme.spacing(5)};
 `;
@@ -57,6 +56,7 @@ export const BtnLogIn = styled.button`
   border-radius: ${theme.radius.xl};
   transition: color ${theme.transition};
   background-color: transparent;
+  padding: ${theme.spacing(6)} ${theme.spacing(19.5)};
 
   &:hover {
     color: ${theme.colors.lightGreen};
@@ -65,7 +65,6 @@ export const BtnLogIn = styled.button`
   span {
     font-weight: 500;
     line-height: 1.25;
-    margin: ${theme.spacing(7)} ${theme.spacing(19.5)};
   }
 `;
 
@@ -76,6 +75,7 @@ export const BtnRegistartion = styled.button`
     color ${theme.transition},
     background-color ${theme.transition};
   border: none;
+  padding: ${theme.spacing(6)} ${theme.spacing(20)};
 
   &:hover {
     background-color: ${theme.colors.lightGreen};
