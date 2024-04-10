@@ -16,7 +16,7 @@ import { auth } from '../../firebase';
 import { AuthProvider } from './Auth';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 
-export const signUpSchema = Yup.object({
+export const Registration = Yup.object({
   name: Yup.string()
     .min(4, `Minimum 4 letter`)
     .max(20, `Maximum 20 letter`)
@@ -58,7 +58,7 @@ export const SignUp = ({ onRequestclose }) => {
     <>
       <Formik
         initialValues={{ user: '', email: '', password: '' }}
-        validationSchema={signUpSchema}
+        validationSchema={Registration}
         onSubmit={handleSubmit}
       >
         <StyledForm>
