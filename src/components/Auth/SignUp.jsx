@@ -17,18 +17,18 @@ import { auth } from '../../firebase';
 import { AuthProvider } from './Auth';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 
-export const Registration = Yup.object({
+const registerSchema = Yup.object({
   name: Yup.string()
-    .min(4, `Minimum 4 letter`)
-    .max(20, `Maximum 20 letter`)
-    .required(`This ia a required field`),
+    .min(3, 'Minimum 3 characters')
+    .max(30, 'Maximum 30 characters')
+    .required('This is a required field'),
   email: Yup.string()
-    .email(`Invalis email adress`)
-    .required(`This is a required field`),
+    .email('Invalid email address')
+    .required('This is a required field'),
   password: Yup.string()
-    .min(4, `Must least 4 symbols`)
-    .max(64, `At most 64 symbols`)
-    .required(`This is a required field`),
+    .min(7, 'At least 7 simbols')
+    .max(20, 'At most 20 simbols')
+    .required('This is a required field'),
 });
 
 export const SignUp = ({ onRequestClose }) => {
@@ -45,12 +45,12 @@ export const SignUp = ({ onRequestClose }) => {
         resetForm(),
         onRequestClose()
       )
-      .catch((error) => {
+      .catch((error) =>
         toast.error(`Have a problem, ${error}`, {
           duration: 5000,
           position: 'top-right',
-        });
-      });
+        })
+      );
   };
 
   const handleTogglePassword = () => {
@@ -61,7 +61,7 @@ export const SignUp = ({ onRequestClose }) => {
     <>
       <Formik
         initialValues={{ name: '', email: '', password: '' }}
-        validationSchema={Registration}
+        validationSchema={registerSchema}
         onSubmit={handleSubmit}
       >
         <StyledForm>
