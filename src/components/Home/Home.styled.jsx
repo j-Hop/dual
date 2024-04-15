@@ -3,14 +3,17 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Section = styled.div`
-  padding: ${theme.spacing(32)};
-  max-inline-size: 1380px;
+  padding: ${theme.spacing(32)} ${theme.spacing(48)};
+  inline-size: 1380px;
   background-color: ${theme.colors.green};
+  block-size: 736px;
+  border-radius: ${theme.radius.xl};
 `;
 
 export const HomeInfo = styled.div`
   position: absolute;
   max-inline-size: 530px;
+  top: 251px;
 
   h2 {
     font-size: 70px;
@@ -30,9 +33,9 @@ export const HomeInfo = styled.div`
 `;
 
 export const HomeImg = styled.img`
-  border-radius: ${theme.spacing(0)} ${theme.spacing(15)} ${theme.spacing(15)}
-    ${theme.spacing(0)};
-  background-color: rgba(18, 20, 23, 0.6);
+  height: 736px;
+  max-width: 699px;
+  transform: translate(585px, -64px);
 `;
 
 export const BtnStart = styled(NavLink)`
@@ -59,20 +62,16 @@ export const BtnStart = styled(NavLink)`
   }
 `;
 
-export const HomeFlexBox = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`;
-
 export const InfoHomeBox = styled.div`
   padding: ${theme.spacing(16)};
   border: none;
   border-radius: 20px;
   background-color: ${theme.colors.light};
-  position: absolute;
-  right: 50px;
-  bottom: 50px;
-  max-inline-size: 290px;
+  position: relative;
+  left: 937px;
+  bottom: 230px;
+  inline-size: 290px;
+  display: flex;
 
   h2 {
     color: ${theme.colors.black};
@@ -86,7 +85,7 @@ export const InfoHomeBox = styled.div`
     font-size: 16px;
     font-weight: 400;
     line-height: 1.2;
-    margin-block-end: ${theme.spacing(3)};
+    margin: 0;
   }
 `;
 
@@ -95,8 +94,14 @@ export const BoxCheck = styled.div`
   background-color: ${theme.colors.green};
   border-radius: 13px;
   margin-inline-end: ${theme.spacing(8)};
+  width: 54px;
+  height: 54px;
+  padding: ${theme.spacing(9.75)} ${theme.spacing(8.5)};
 `;
 
-export const IconCheck = styled.svg`
-  padding: ${theme.spacing(9.75)} ${theme.spacing(8.5)};
+export const BoxWrap = styled.div`
+display: flex;
+flex-direction: column;
+gap: ${theme.spacing(3)};
+}
 `;

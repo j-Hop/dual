@@ -3,36 +3,36 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const HeaderBox = styled.header`
-  padding: ${theme.spacing(10)} ${theme.spacing(48)};
-  border: 1px solid rgba(251, 251, 251, 0.4);
+  padding: ${theme.spacing(15)} ${theme.spacing(48)};
+  border-bottom: 1px solid rgba(251, 251, 251, 0.4);
+  position: absolute;
+  width: 1380px;
+  z-index: 1;
 `;
 
 export const Navigation = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
   white-space: nowrap;
-  padding: ${theme.spacing(5)};
-  gap: ${theme.spacing(5)};
-  margin-bottom: ${theme.spacing(5)};
 `;
 
 export const NavList = styled.ul`
   display: flex;
   gap: ${theme.spacing(20)};
+  margin-right: 92px;
 `;
 
 export const StyledLink = styled(NavLink)`
   line-height: 1.25;
   transition: color ${theme.transition};
+  color: ${theme.colors.light};
 
   &:hover {
     color: ${theme.colors.primary};
   }
 
   &.active {
-    color: ${theme.colors.lightGreen};
-  }
+    border-bottom: 4px dotted ${theme.colors.light};
 `;
 
 export const Logo = styled.h1`
@@ -40,6 +40,7 @@ export const Logo = styled.h1`
   font-weight: 500;
   line-height: 1.16;
   color: ${theme.colors.light};
+  margin-right: 487px;
 `;
 
 export const IconUser = styled.img`
@@ -57,6 +58,7 @@ export const BtnLogIn = styled.button`
   transition: color ${theme.transition};
   background-color: transparent;
   padding: ${theme.spacing(6)} ${theme.spacing(19.5)};
+  margin-inline-end: ${theme.spacing(4)};
 
   &:hover {
     color: ${theme.colors.lightGreen};
@@ -65,6 +67,7 @@ export const BtnLogIn = styled.button`
   span {
     font-weight: 500;
     line-height: 1.25;
+    color: ${theme.colors.light};
   }
 `;
 
@@ -84,7 +87,7 @@ export const BtnRegistartion = styled.button`
   span {
     font-weight: 500;
     line-height: 1.25;
-    margin: ${theme.spacing(7)} ${theme.spacing(20)};
+    color: ${theme.colors.light};
   }
 `;
 

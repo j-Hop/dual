@@ -4,12 +4,11 @@ import { useState } from 'react';
 import {
   BtnStart,
   BoxCheck,
-  HomeFlexBox,
   HomeImg,
   HomeInfo,
   Section,
-  IconCheck,
   InfoHomeBox,
+  BoxWrap,
 } from './Home.styled';
 
 export const Home = () => {
@@ -21,36 +20,34 @@ export const Home = () => {
 
   return (
     <Section>
-      <HomeFlexBox>
-        <HomeInfo>
-          <h2>Make Life Easier for the Family:</h2>
-          <p>Find Babysitters Online for All Occasions</p>
-          <BtnStart to="/nannies" onChange={handleToggleArrow}>
-            <span>Get started</span>
-            <svg width="15" height="22">
-              <use
-                xlinkHref={
-                  changeHover
-                    ? `${SpriteIcon}#icon-Arrow-inline`
-                    : `${SpriteIcon}#icon-Arrow-up`
-                }
-              />
-            </svg>
-          </BtnStart>
-        </HomeInfo>
-        <HomeImg src={HeroImg} alt="home" />
-        <InfoHomeBox>
-          <BoxCheck>
-            <IconCheck>
-              <svg width="20" height="15">
-                <use xlinkHref={`${SpriteIcon}#icon-check`} />
-              </svg>
-            </IconCheck>
-          </BoxCheck>
+      <HomeInfo>
+        <h2>Make Life Easier for the Family:</h2>
+        <p>Find Babysitters Online for All Occasions</p>
+        <BtnStart to="/nannies" onChange={handleToggleArrow}>
+          <span>Get started</span>
+          <svg width="15" height="22">
+            <use
+              xlinkHref={
+                changeHover
+                  ? `${SpriteIcon}#icon-Arrow-inline`
+                  : `${SpriteIcon}#icon-Arrow-up`
+              }
+            />
+          </svg>
+        </BtnStart>
+      </HomeInfo>
+      <HomeImg src={HeroImg} alt="home" />
+      <InfoHomeBox>
+        <BoxCheck>
+          <svg width="20" height="15">
+            <use xlinkHref={`${SpriteIcon}#icon-check`} />
+          </svg>
+        </BoxCheck>
+        <BoxWrap>
           <p>Experienced nannies</p>
           <h2>15,000</h2>
-        </InfoHomeBox>
-      </HomeFlexBox>
+        </BoxWrap>
+      </InfoHomeBox>
     </Section>
   );
 };
