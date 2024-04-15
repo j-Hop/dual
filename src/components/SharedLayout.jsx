@@ -5,9 +5,9 @@ import { Loader } from './Loader';
 import { Header } from './Header/Header';
 
 const GlobalBox = styled.div`
-  padding: 32px 0 0 32px;
-  width: 1440px;
-  height: 800px;
+  padding: 16px 0px 0px 32px;
+  max-width: 1440px;
+  max-height: 800px;
 `;
 
 export const SharedLayout = () => {
