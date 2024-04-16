@@ -1,4 +1,4 @@
-import{s as e,t as n,N as l,r as c,j as i,S as o}from"./index-4e3f3cba.js";const d="/dual/assets/Rectangle 1-2557fb2d.png",g=e.div`
+import{s as e,t as n,N as l,r as c,j as i,S as o}from"./index-cd8961f9.js";const d="/dual/assets/Rectangle 1-2557fb2d.png",g=e.div`
   padding: ${n.spacing(32)} ${n.spacing(48)};
   inline-size: 1380px;
   background-color: ${n.colors.green};
