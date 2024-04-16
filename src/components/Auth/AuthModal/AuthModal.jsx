@@ -10,7 +10,7 @@ const Custom = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
+    transform: 'translate(-50%, -45%)',
     borderRadius: '30px',
     padding: '64px',
     zIndex: '9999',
