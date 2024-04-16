@@ -10,7 +10,7 @@ const Custom = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    transform: 'translate(-50%, -45%)',
+    transform: 'translate(-50%, -50%)',
     borderRadius: '30px',
     padding: '64px',
     zIndex: '9999',
@@ -18,6 +18,12 @@ const Custom = {
     maxHeight: '90vh',
     scrollbarColor: '#888 #e0e0e0',
     scrollbarWidth: 'thin',
+  },
+  overlay: {
+    zIndex: '1000',
+    position: 'fixed',
+    inset: '0px',
+    backgroundColor: 'rgba(255, 255, 255, 0.75)',
   },
 };
 
