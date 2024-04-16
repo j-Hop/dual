@@ -10,18 +10,17 @@ export const AuthProvider = ({ onRequestClose }) => {
       .then(() => {
         onRequestClose();
       })
-
       .catch((error) => {
-        toast.error(`Not found account!, ${error}`, {
-          position: 'top-right',
+        toast.error(`Could not find account, ${error}`, {
           duration: 5000,
+          position: 'top-right',
         });
       });
   }
 
   return (
     <BtnSubmitGoogle onClick={handleSubmitWithGoogle}>
-      Continue With
+      Continue with
       <GoogleIcon src={google} alt="google" />
     </BtnSubmitGoogle>
   );

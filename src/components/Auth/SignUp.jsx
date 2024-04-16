@@ -3,6 +3,9 @@ import { useState } from 'react';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import SpriteIcon from '../../images/sprite.svg';
+import { auth } from '../../firebase';
+import { AuthProvider } from './AuthProvider';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import {
   Title,
   StyledInput,
@@ -13,9 +16,6 @@ import {
   PasswordLabel,
   StyledInputPassword,
 } from './Auth.styled';
-import { auth } from '../../firebase';
-import { AuthProvider } from './Auth';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 const registerSchema = Yup.object({
   name: Yup.string()

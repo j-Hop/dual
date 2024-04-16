@@ -1,6 +1,6 @@
-import { auth } from "../firebase";
-import { Navigate } from "react-router-dom";
+import { auth } from '../firebase';
+import { Navigate } from 'react-router-dom';
 
-export const PrivatRoute = ({children}) => {
-return !auth ? <Navigate to='/'/> : children;
+export const PrivatRoute = ({ children }) => {
+  return !auth ? <Navigate to="/" /> : children;
 };

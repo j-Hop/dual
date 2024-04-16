@@ -48,18 +48,17 @@ export const Header = () => {
     return () => listen();
   }, []);
 
-  const SignOut = () => {
+  const userSignOut = () => {
     signOut(auth)
       .then(() =>
-        toast.success(`See you!`, {
-          position: 'top-right',
+        toast.success('See you soon!', {
           duration: 5000,
-          icon: `🖐️`,
+          position: 'top-right',
+          icon: '✌',
         })
       )
-
       .catch((error) =>
-        toast.error(`Have a problem, ${error}`, {
+        toast.error(`Something went wrong! ${error}`, {
           duration: 5000,
           position: 'top-right',
         })
@@ -94,7 +93,7 @@ export const Header = () => {
                 </svg>
               </IconUser>
               <SpanName>{authUser.name}</SpanName>
-              <BtnLogOut onClick={SignOut}>
+              <BtnLogOut onClick={userSignOut}>
                 <span>Log Out</span>
               </BtnLogOut>
             </>
