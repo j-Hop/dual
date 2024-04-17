@@ -1,6 +1,5 @@
 import SpriteIcon from '../../images/sprite.svg';
 import HeroImg from '../../images/Rectangle 1.png';
-import { useState } from 'react';
 import {
   BtnStart,
   BoxCheck,
@@ -12,27 +11,15 @@ import {
 } from './Home.styled';
 
 export const Home = () => {
-  const [changeHover, setChangeHover] = useState(false);
-
-  const handleToggleArrow = () => {
-    setChangeHover((prevState) => !prevState);
-  };
-
   return (
     <Section>
       <HomeInfo>
         <h2>Make Life Easier for the Family:</h2>
         <p>Find Babysitters Online for All Occasions</p>
-        <BtnStart to="/nannies" onChange={handleToggleArrow}>
+        <BtnStart to="/nannies">
           <span>Get started</span>
           <svg width="15" height="22">
-            <use
-              xlinkHref={
-                changeHover
-                  ? `${SpriteIcon}#icon-Arrow-inline`
-                  : `${SpriteIcon}#icon-Arrow-up`
-              }
-            />
+            <use xlinkHref={`${SpriteIcon}#icon-Arrow-inline`} />
           </svg>
         </BtnStart>
       </HomeInfo>
