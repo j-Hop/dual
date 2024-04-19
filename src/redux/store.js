@@ -14,21 +14,21 @@ import {
   REHYDRATE,
 } from 'redux-persist';
 
-const persitsConfig = {
+const persistConfig = {
   key: 'root',
   storage,
 };
 
 export const store = configureStore({
   reducer: {
-    nanny: nannyReducer,
-    filter: favoriteReducer,
-    favorites: persistReducer(persitsConfig, filterReducer),
+    teachers: nannyReducer,
+    filter: filterReducer,
+    favorites: persistReducer(persistConfig, favoriteReducer),
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
-        ignoreActions: [FLUSH, PERSIST, PAUSE, PURGE, REGISTER, REHYDRATE],
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
   devTools: process.env.NODE_ENV === 'development',

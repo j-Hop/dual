@@ -9,17 +9,38 @@ import {
   InfoHomeBox,
   BoxWrap,
 } from './Home.styled';
+import { useState } from 'react';
 
 export const Home = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
     <Section>
       <HomeInfo>
         <h2>Make Life Easier for the Family:</h2>
         <p>Find Babysitters Online for All Occasions</p>
-        <BtnStart to="/nannies">
+        <BtnStart
+          to="/nannies"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <span>Get started</span>
-          <svg width="15" height="22">
-            <use xlinkHref={`${SpriteIcon}#icon-Arrow-inline`} />
+          <svg width="15" height="15">
+            <use
+              xlinkHref={
+                isHovered
+                  ? `${SpriteIcon}#icon-Arrow-inline`
+                  : `${SpriteIcon}#icon-Arrow-up`
+              }
+            />
           </svg>
         </BtnStart>
       </HomeInfo>
