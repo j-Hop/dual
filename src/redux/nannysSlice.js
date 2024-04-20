@@ -2,9 +2,9 @@ import { createSlice } from '@reduxjs/toolkit';
 import { fetchData } from './operations.js';
 
 const nannySlice = createSlice({
-  name: 'nanny',
+  name: 'nannies',
   initialState: {
-    nanny: [],
+    nannies: [],
     loading: false,
     error: null,
   },
@@ -13,7 +13,7 @@ const nannySlice = createSlice({
     builder
       .addCase(fetchData.fulfilled, (state, { payload }) => {
         state.loading = false;
-        state.nanny = payload;
+        state.nannies = payload;
       })
       .addCase(fetchData.pending, (state) => {
         state.loading = true;
