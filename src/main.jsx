@@ -1,3 +1,7 @@
+import { PersistGate } from 'redux-persist/integration/react';
+import { Provider } from 'react-redux';
+import { persistor, store } from './redux/store';
+import './firebase';
 import ReactDOM from 'react-dom/client';
 import { App } from './App';
 import { Toaster } from 'react-hot-toast';
@@ -5,10 +9,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { theme } from 'components/theme';
 import { GlobalStyle } from 'components/GlobalStyle';
-import { PersistGate } from 'redux-persist/integration/react';
-import { Provider } from 'react-redux';
-import { persistor, store } from './redux/store';
-import './firebase';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <Provider store={store}>
